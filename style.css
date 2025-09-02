@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    background: #222;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#taskbar {
+    background: #333;
+    color: #fff;
+    padding: 8px 16px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+}
+
+#desktop {
+    padding: 60px 20px 60px 20px;
+    min-height: 100vh;
+}
+
+.window {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    width: 400px;
+    margin: 40px auto;
+    overflow: hidden;
+}
+
+.window-title {
+    background: #0078d7;
+    color: #fff;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.window-content {
+    padding: 20px;
+}
