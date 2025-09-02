@@ -1,29 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>CobyOS - All About Me</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div id="taskbar">
-        <span>CobyOS</span>
-        <span id="clock"></span>
-    </div>
-    <div id="desktop">
-        <div class="window" id="aboutMeWindow">
-            <div class="window-title">About Me</div>
-            <div class="window-content">
-                <h2>Coby</h2>
-                <p>Hello! I'm Coby, and this is my personal website styled like an operating system.</p>
-                <ul>
-                    <li>Hobbies: Gaming, Reading, Anime, Programming, making stuff</li>
-                    <li>Favorite Language: Python</li>
-                    <li>Fun Fact: I love playing fighting games</li>
-                </ul>
-            </div>
+    <head>
+        <meta charset="UTF-8">
+        <title>CobyOS - All About Me</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="taskbar">
+            <span>CobyOS</span>
+            <span id="clock"></span>
         </div>
-    </div>
-    <script src="script.js"></script>
-</body>
+        <div id="desktop">
+            <div class="desktop-icon" data-app="aboutMe">
+                <img src="https://img.icons8.com/color/48/000000/user.png" alt="About Me">
+                <span>About Me</span>
+            </div>
+
+            <div class="desktop-icon" data-app="favoriteBooks">
+                <img src="images/calibre.svg" alt="Favorite Books">
+                <span>Favorite Books</span>
+            </div>
+
+            <div class="window" id="aboutMeWindow">
+                <div class="window-title">About Me <button class="window-close" title="Close">&times;</button></div>
+                <div class="window-content">
+                    <h2>Coby</h2>
+                    <p>Hello! I'm Coby, and this is my personal website styled like an operating system.</p>
+                    <ul>
+                        <li>Hobbies: Gaming, Reading, Anime, Programming, making stuff</li>
+                        <li>Favorite Games: Pikmin, Persona 5, Super Smash Bros. Ultimate, Risk of Rain</li>
+                        <li>Fun Fact: I love playing fighting games</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="window" id="favoriteBooksWindow">
+                <div class="window-title">Favorite Books <button class="window-close" title="Close">&times;</button></div>
+                <div class="window-content">
+                    <h2>Books</h2>
+                    <p>I like to read classical literature and Japanese light novels (English translated).</p>
+                    <ul>
+                        <li>Hobbies: Gaming, Reading, Anime, Programming, making stuff</li>
+                        <li>Favorite Language: Python</li>
+                        <li>Favorite Games: Pikmin, Persona 5, Super Smash Bros. Ultimate, Risk of Rain</li>
+                        <li>Fun Fact: I love playing fighting games</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <script src="script.js"></script>
+    </body>
 </html>
