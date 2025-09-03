@@ -1,193 +1,197 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>CobyOS - All About Me</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <div id="taskbar">
-            <div class="taskbar-left">
-                <button class="menu-btn" title="Menu">
-                    <img src="images/menu.png" alt="Menu" style="vertical-align:middle;">
-                </button>
-                <span class="taskbar-title">CobyOS</span>
-                <span class="taskbar-icon" title="Files">
-                    <img src="images/folder-invoices.png" alt="Files">
-                </span>
-                <span class="taskbar-icon" title="Browser">
-                    <img src="images/internet.png" alt="Browser">
-                </span>
-            </div>
-            <div class="taskbar-right">
-                <span id="clock"></span>
-            </div>
-        </div>
-
-        <div id="desktop">
-
-            <!-- DESKTOP APPS/ICONS  -->
-            <div id="desktop-icons">
-
-                <div class="desktop-icon" data-app="trashBin">
-                    <img src="images/appIcons/trash.svg" alt="Trash Bin">
-                    <span>Trash Bin</span>
+    <!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <title>CobyOS - All About Me</title>
+            <link rel="stylesheet" href="style.css">
+        </head>
+        <body>
+            <div id="taskbar">
+                <div class="taskbar-left">
+                    <button class="menu-btn" title="Menu">
+                        <img src="images/appIcons/menu.png" alt="Menu" style="vertical-align:middle;">
+                    </button>
+                    <span class="taskbar-title">CobyOS</span>
+                    <span class="taskbar-icon" title="Files">
+                        <img src="images/appIcons/folder-invoices.png" alt="Files">
+                    </span>
+                    <span class="taskbar-icon" title="Browser">
+                        <img src="images/appIcons/internet.png" alt="Browser">
+                    </span>
                 </div>
-                
-                <div class="desktop-icon" data-app="aboutMe">
-                    <img src="images/appIcons/user.png" alt="About Me">
-                    <span>About Me</span>
-                </div>
-
-                <div class="desktop-icon" data-app="favoriteGames">
-                    <img src="images/appIcons/steam.png" alt="Favorite Games">
-                    <span>Favorite Games</span>
-                </div>
-
-                <div class="desktop-icon" data-app="favoriteFilms">
-                    <img src="images/appIcons/vlc.png" alt="Favorite Films">
-                    <span>Favorite Films/Shows</span>
-                </div>
-
-                <div class="desktop-icon" data-app="favoriteBooks">
-                    <img src="images/appIcons/calibre.svg" alt="Favorite Books">
-                    <span>Favorite Books</span>
-                </div>
-
-                <div class="desktop-icon" data-app="homework">
-                    <img src="images/appIcons/folder.png" alt="Homework">
-                    <span>Homework</span>
-                </div>
-
-                <div class="desktop-icon" data-app="projects">
-                    <img src="images/appIcons/vscode.png" alt="Projects">
-                    <span>Projects</span>
+                <div class="taskbar-right">
+                    <span id="clock"></span>
                 </div>
             </div>
 
-            <!-- WINDOWS OPENED BY APPS -->
-            <div class="windows-container">
-                <div class="window" id="aboutMeWindow" style="display:none;">
-                    <div class="window-title">About Me <button class="window-close" title="Close">&times;</button></div>
-                    <div class="window-content"> 
-                        <h2>Coby</h2>
-                        <p>Hello everyone, my name is Coby, and this is a website I made that is styled      like an operating system.</p>
-                        <ul>
-                            <li>Hobbies: Gaming, Reading, Anime, Programming, making stuff</li>
-                            <li>I am majoring in computer engineering. I hope to work on VLSI system architecture</li>
-                            <li>Fun Fact: I love playing fighting games</li>
-                        </ul>
+            <div id="desktop">
+
+                <!-- DESKTOP APPS/ICONS  -->
+                <div id="desktop-icons">
+
+                    <div class="desktop-icon" data-app="trashBin">
+                        <img src="images/appIcons/trash.svg" alt="Trash Bin">
+                        <span>Trash Bin</span>
                     </div>
-                </div>
-
-                <div class="window" id="favoriteGamesWindow" style="display:none;">
-                    <div class="window-title">Favorite Games <button class="window-close" title="Close">&times;</button></div>
-                    <div class="window-content">
-                        <h2>Games</h2>
-                        <p>I enjoy playing a variety of video games across different genres. My favorite genre</p>
-                        <ul>
-                            <li><span class="popup-link" data-window="persona">Persona 5 Royal</span></li>
-                            <li><span class="popup-link" data-window="pikmin">Pikmin</span></li>
-                            <li><span class="popup-link" data-window="smash">Super Smash Bros. Ultimate</span></li>
-                            <li><span class="popup-link" data-window="limbus">Limbus Company</span></li>
-                            <li><span class="popup-link" data-window="guiltyGear">Guilty Gear -Strive- </span></li>
-                            <li><span class="popup-link" data-window="terraria">Terraria</span></li>
-                            <li><span class="popup-link" data-window="slay">Slay the Princess</span></li>
-                            <li><span class="popup-link" data-window="danganronpa">Danganronpa</span></li>
-                            <li><span class="popup-link" data-window="risk">Risk of Rain</span></li>
-                            <li><span class="popup-link" data-window="fireEmblem">Fire Emblem: Awakening</span></   li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="window" id="favoriteBooksWindow" style="display:none;">
-                    <div class="window-title">Favorite Books <button class="window-close" title="Close">&times;</button></div>
-                    <div class="window-content">
-                        <h2>Books</h2>
-                        <p>I like to read classical literature and Japanese light novels (English translated).</p>
-                        <ul>
-                            <li>No Longer Human by Osamu Dazai</li>
-                            <li>The Metamorphosis by Franz Kafka</li>
-                            <li>Wuthering Heights by Emily Bronte</li>
-                            <li>The Evolution of Calpurnia Tate</li>
-                            <li>The Melancholy of Haruhi Suzumiya </li>
-                            <li>Sherlock Holmes by Sir Conan Arthur Doyle</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="window" id="favoriteFilmsWindow" style="display:none;">
-                    <div class="window-title">Favorite Films/Shows <button class="window-close" title="Close">&times;</button></div>
-                    <div class="window-content">
-                        <h2>Films/Shows</h2>
-
-                        <h3>Anime</h3>
-                        <ul>
-                            <li><span class="popup-link" data-window="nisekoi">Nisekoi: False Love</span></li>
-                            <li><span class="popup-link" data-window="codeGeass">Code Geass</span></li>
-                            <li><span class="popup-link" data-window="silentVoice">A Silent Voice</span></li>
-                            <li><span class="popup-link" data-window="haruhi">The Melancholy of Haruhi Suzumiya</span></li>
-                            <li><span class="popup-link" data-window="march">March comes in like a lion</span></li>
-                            <li><span class="popup-link" data-window="mobPsycho">Mob Psycho 100</span></li>
-                            <li><span class="popup-link" data-window="attackOnTitan">Attack on Titan</span></li>
-                            <li><span class="popup-link" data-window="saikiK">The Disastrous Life of Saiki K.</span></li>
-                            <li><span class="popup-link" data-window="steinsGate">Steins;Gate</span></li>
-                        </ul>
-
-                        <h3>Shows</h3>
-                        <ul>
-                            <li><span class="popup-link" data-window="breakingBad">Breaking Bad</span></li>
-                            <li><span class="popup-link" data-window="betterCallSaul">Better Call Saul</span></li>
-                            <li><span class="popup-link" data-window="ninjago">Ninjago</span></li>
-                        </ul>
-
-                        <h3>Movies</h3>
-                        <ul>
-                            <li><span class="popup-link" data-window="backToTheFuture">Back to the Future</span></li>
-                            <li><span class="popup-link" data-window="theTrumanShow">The Truman Show</span></li>
-                            <li><span class="popup-link" data-window="oldboy">Oldboy</span></li>
-                            <li><span class="popup-link" data-window="ipMan">Ip Man</span></li>
-                            <li><span class="popup-link" data-window="whiplash">Whiplash</span></li>
-                            <li><span class="popup-link" data-window="superman2025">Superman (2025)</span></li>
-                            <li><span class="popup-link" data-window="theBatman2022">The Batman (2022)</span></li>
-                            <li><span class="popup-link" data-window="theLEGOmovie">The LEGO Movie</span></li>
-                            <li><span class="popup-link" data-window="everythingEverywhere">Everything, Everywhere, All At Once</span></li>
-                        </ul>
-
-
-
-                    </div>
-                </div>
-
-                <div class="window" id="homeworkWindow" style="display:none;">
-                    <div class="window-title">Homework <button class="window-close" title="Close">&times;</button></div>
-                    <div class="window-content">
-                        <h2>Competitions</h2>
-                        <ul>
-                            <h3>SkillsUSA</h3>
-                            <li>Engineering Technology Design </li>
-                            <li>Programming</li>
-                            <li>Emblem Ceremony</li>
                     
-                            <h3>Business Professionals of America</h3>
-                            <li>Network Design Team</li>
-                        </ul>
+                    <div class="desktop-icon" data-app="aboutMe">
+                        <img src="images/appIcons/user.png" alt="About Me">
+                        <span>About Me</span>
+                    </div>
+
+                    <div class="desktop-icon" data-app="favoriteGames">
+                        <img src="images/appIcons/steam.png" alt="Favorite Games">
+                        <span>Favorite Games</span>
+                    </div>
+
+                    <div class="desktop-icon" data-app="favoriteFilms">
+                        <img src="images/appIcons/vlc.png" alt="Favorite Films">
+                        <span>Favorite Films/Shows</span>
+                    </div>
+
+                    <div class="desktop-icon" data-app="favoriteBooks">
+                        <img src="images/appIcons/calibre.svg" alt="Favorite Books">
+                        <span>Favorite Books</span>
+                    </div>
+
+                    <div class="desktop-icon" data-app="homework">
+                        <img src="images/appIcons/folder.png" alt="Homework">
+                        <span>Homework</span>
+                    </div>
+
+                    <div class="desktop-icon" data-app="projects">
+                        <img src="images/appIcons/vscode.png" alt="Projects">
+                        <span>Projects</span>
+                    </div>
                 </div>
-            </div>
 
-            <!-- REFERENCE WINDOWS - WINDOW IN WINDOWS -------- -->
+                <!-- WINDOWS OPENED BY APPS -->
+                <div class="windows-container">
+                    <div class="window" id="aboutMeWindow" style="display:none;">
+                        <div class="window-title">About Me <button class="window-close" title="Close">&times;</button></div>
+                        <div class="window-content"> 
+                            <h2>Coby</h2>
+                            <p>Hello everyone, my name is Coby, and this is a website I made that is styled like an operating system.</p>
+                            <ul>
+                                <li>Hobbies: Gaming, reading, anime, programming, drawing, learning new things</li>
+                                <li>I am majoring in computer engineering. I hope to work on VLSI system architecture</li>
+                                <li>Fun Fact: I love playing fighting games</li>
+                            </ul>
+                        </div>
+                    </div>
 
-            </div>
+                    <div class="window" id="favoriteGamesWindow" style="display:none;">
+                        <div class="window-title">Favorite Games <button class="window-close" title="Close">&times;</button></div>
+                        <div class="window-content">
+                            <h2>Games</h2>
+                            <p>I enjoy playing a variety of video games across different genres. My favorite type of games are fighting games.</p>
+                            <ul>
+                                <li><span class="preview-link" data-preview="images/references/persona.gif">Persona 5 Royal</span></li>
+                                <li><span class="preview-link" data-preview="images/references/pikmin.png">Pikmin</span></li>
+                                <li><span class="preview-link" data-preview="images/references/smash.png">Super Smash Bros. Ultimate</span></li>
+                                <li><span class="preview-link" data-preview="images/references/limbus.gif">Limbus Company</span></li>
+                                <li><span class="preview-link" data-preview="images/references/guiltygear.png">Guilty Gear -Strive- </span></li>
+                                <li><span class="preview-link" data-preview="images/references/terraria.png">Terraria</span></li>
+                                <li><span class="preview-link" data-preview="images/references/slay.png">Slay the Princess</span></li>
+                                <li><span class="preview-link" data-preview="images/references/danganronpa.png">Danganronpa</span></li>
+                                <li><span class="preview-link" data-preview="images/references/riskofrain.png">Risk of Rain</span></li>
+                                <li><span class="preview-link" data-preview="images/references/fireemblem.png">Fire Emblem: Awakening</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Preview box for Persona 5 Royal (shown on hover) -->
+                    <div id="previewBox" style="display:none; position:absolute; z-index:9999; pointer-events:none;">
+                    <img id="previewImg" src="" alt="Preview" style="max-width:220px; max-height:220px;">
+                    </div>
 
-            <div id="referenceWindows">
-                <div class="window" id="persona" style="display:none;">
-                    <div class="window-title">Persona 5 Royal <button class="window-close" title="Close">&times;</button></div>
-                    <div class="window-content">
-                        <img src="images/references/games/persona.gif" alt="Persona 5 Royal" style="width:100%;">
-                        <!-- Or embed a video: -->
-                        <!-- <iframe width="100%" height="250" src="https://www.youtube.com/embed/2uq34TeWEdQ" frameborder="0" allowfullscreen></iframe> -->
-            </div>
+                    <div class="window" id="favoriteBooksWindow" style="display:none;">
+                        <div class="window-title">Favorite Books <button class="window-close" title="Close">&times;</button></div>
+                        <div class="window-content">
+                            <h2>Books</h2>
+                            <p>I like to read classical literature and Japanese light novels (English translated).</p>
+                            <ul>
+                                <li>No Longer Human by Osamu Dazai</li>
+                                <li>The Metamorphosis by Franz Kafka</li>
+                                <li>Wuthering Heights by Emily Bronte</li>
+                                <li>The Evolution of Calpurnia Tate</li>
+                                <li>The Melancholy of Haruhi Suzumiya </li>
+                                <li>Sherlock Holmes by Sir Conan Arthur Doyle</li>
+                            </ul>
+                        </div>
+                    </div>
 
-        <script src="script.js"></script>
-    </body>
-</html>
+                    <div class="window" id="favoriteFilmsWindow" style="display:none;">
+                        <div class="window-title">Favorite Films/Shows <button class="window-close" title="Close">&times;</button></div>
+                        <div class="window-content">
+                            <h2>Films/Shows</h2>
+
+                            <h3>Anime</h3>
+                            <ul>
+                                <li><span class="preview-link" data-preview="images/reference/nisekoi.png">Nisekoi: False Love</span></li>
+                                <li><span class="preview-link" data-preview="images/reference/codeGeass.png">Code Geass</span></li>
+                                <li><span class="preview-link" data-preview="images/reference/silentVoice.png">A Silent Voice</span></li>
+                                <li><span class="preview-link" data-preview="images/reference/haruhi.png">The Melancholy of Haruhi Suzumiya</span></li>
+                                <li><span class="preview-link" data-preview="images/reference/march.png">March comes in like a lion</span></li>
+                                <li><span class="preview-link" data-preview="images/reference/mobPsycho.png">Mob Psycho 100</span></li>
+                                <li><span class="preview-link" data-preview="images/reference/aot.png">Attack on Titan</span></li>
+                                <li><span class="preview-link" data-preview="images/reference/saiki.png">The Disastrous Life of Saiki K.</span></li>
+                                <li><span class="preview-link" data-preview="images/reference/steins.png">Steins;Gate</span></li>
+                            </ul>
+
+                            <h3>Shows</h3>
+                            <ul>
+                                <li><span class="preview-link" data-preview="breakingBad">Breaking Bad</span></li>
+                                <li><span class="preview-link" data-preview="betterCallSaul">Better Call Saul</span></li>
+                                <li><span class="preview-link" data-preview="ninjago">Ninjago</span></li>
+                            </ul>
+
+                            <h3>Movies</h3>
+                            <ul>
+                                <li><span class="preview-link" data-preview="backToTheFuture">Back to the Future</span></li>
+                                <li><span class="preview-link" data-preview="theTrumanShow">The Truman Show</span></li>
+                                <li><span class="preview-link" data-preview="oldboy">Oldboy</span></li>
+                                <li><span class="preview-link" data-preview="ipMan">Ip Man</span></li>
+                                <li><span class="preview-link" data-preview="whiplash">Whiplash</span></li>
+                                <li><span class="preview-link" data-preview="superman2025">Superman (2025)</span></li>
+                                <li><span class="preview-link" data-preview="theBatman2022">The Batman (2022)</span></li>
+                                <li><span class="preview-link" data-preview="theLEGOmovie">The LEGO Movie</span></li>
+                                <li><span class="preview-link" data-preview="everythingEverywhere">Everything, Everywhere, All At Once</span></li>
+                            </ul>
+
+
+
+                        </div>
+                    </div>
+
+                    <div class="window" id="homeworkWindow" style="display:none;">
+                        <div class="window-title">Homework <button class="window-close" title="Close">&times;</button></div>
+                        <div class="window-content">
+                            <h2>Competitions</h2>
+                            <ul>
+                                <h3>SkillsUSA</h3>
+                                <li>Engineering Technology Design </li>
+                                <li>Programming</li>
+                                <li>Emblem Ceremony</li>
+                        
+                                <h3>Business Professionals of America</h3>
+                                <li>Network Design Team</li>
+                            </ul>
+                    </div>
+                </div>
+
+                <!-- REFERENCE WINDOWS - WINDOW IN WINDOWS -------- -->
+
+                </div>
+
+                <div id="referenceWindows">
+                    <div class="window" id="persona" style="display:none;">
+                        <div class="window-title">Persona 5 Royal <button class="window-close" title="Close">&times;</button></div>
+                        <div class="window-content">
+                            <img src="images/references/games/persona.gif" alt="Persona 5 Royal" style="width:100%;">
+                            <!-- Or embed a video: -->
+                            <!-- <iframe width="100%" height="250" src="https://www.youtube.com/embed/2uq34TeWEdQ" frameborder="0" allowfullscreen></iframe> -->
+                </div>
+
+            <script src="script.js"></script>
+        </body>
+    </html>

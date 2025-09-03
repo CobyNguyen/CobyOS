@@ -144,3 +144,22 @@ body {
 .link-text:hover, .popup-link:hover {
   color: #0078d7;
 }
+
+.preview-link {
+  color: #000000;
+  cursor: pointer;
+}
+.preview-link:hover {
+  color: #0078d7;
+}
+
+#previewBox {
+  display: none;
+  position: absolute;
+  z-index: 9999;
+  pointer-events: none;
+  background: rgba(255,255,255,0.95);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  padding: 8px;
+}
