@@ -108,8 +108,8 @@ body {
 }
 
 .window-title {
-    background: #0078d7;
-    color: #fff;
+    background: #f6fa17;
+    color: #1a1919;
     padding: 10px;
     font-weight: bold;
     cursor: move;
@@ -135,4 +135,12 @@ body {
 
 .window-content {
     padding: 20px;
+}
+
+.link-text, .popup-link {
+  color: #000000;
+  cursor: pointer;
+}
+.link-text:hover, .popup-link:hover {
+  color: #0078d7;
 }
