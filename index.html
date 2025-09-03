@@ -85,18 +85,27 @@
                         </div>
                     </div>
 
-                    <div class="window" id="photosWindow" style="display:none;">
+ <div class="window" id="photosWindow" style="display:none;">
                         <div class="window-title">Photos <button class="window-close" title="Close">&times;</button></div>
-                        <div class="window-content"> 
-                            <h2>Photos</h2>
-                            <p>This is a collection of my favorite photos.</p>
-                            <ul>
-                                <img src="images\gallery\1.png" alt="Photo 1">
-                                <li><img src="images/references/photo2.jpg" alt="Photo 2"></li>
-                                <li><img src="images/references/photo3.jpg" alt="Photo 3"></li>
-                                <li><img src="images/references/photo4.jpg" alt="Photo 4"></li>
-                                <li><img src="images/references/photo5.jpg" alt="Photo 5"></li>
-                            </ul>
+                        <div class="window-content">
+                            <h2>Gallery</h2>
+                            <div class="gallery-grid">
+                                <img src="images/gallery/1.png" alt="Photo 1">
+                                <img src="images/gallery/20240223_192907160_iOS.jpg" alt="Photo 2">
+                                <img src="images/gallery/20240514_111357950_iOS.jpg" alt="Photo 3">
+                                <img src="images/gallery/20241026_042245307_iOS.jpg" alt="Photo 4">
+                                <img src="images/gallery/20250127_145734683_iOS.jpg" alt="Photo 5">
+                                <img src="images/gallery/20250204_195940914_iOS.jpg" alt="Photo 6">
+                                <img src="images/gallery/20250323_012903578_iOS.jpg" alt="Photo 7">
+                                <img src="images/gallery/20250403_002822113_iOS.jpg" alt="Photo 8">
+                                <img src="images/gallery/20250717_232650638_iOS.jpg" alt="Photo 9">
+                                <img src="images/gallery/E3CEE772-6D3F-4CF2-8396-2312BF002158.JPG" alt="Photo 10">
+                                <img src="images/gallery/groupPhoto.JPEG" alt="Group Photo">
+                                <img src="images/gallery/IMG_0704.PNG" alt="Photo 11">
+                                <img src="images/gallery/Screenshot 2025-09-03 002830.png" alt="Screenshot 1">
+                                <img src="images/gallery/Screenshot 2025-09-03 002852.png" alt="Screenshot 2">
+                                <img src="images/gallery/Screenshot 2025-09-03 002956.png" alt="Screenshot 3">
+                            </div>
                         </div>
                     </div>
 
@@ -236,6 +245,9 @@
                         </div>
                     </div>
 
+                    <div id="imageModal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.7); z-index:99999; justify-content:center; align-items:center;">
+                    <img id="modalImg" src="" alt="Large view" style="max-width:90vw; max-height:90vh; border-radius:12px; box-shadow:0 4px 32px rgba(0,0,0,0.4);">
+                    </div>
 
                 </div>
              

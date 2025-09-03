@@ -91,4 +91,18 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   });
+
+  // Image modal logic
+  const imageModal = document.getElementById('imageModal');
+  const modalImg = document.getElementById('modalImg');
+  document.querySelectorAll('.gallery-grid img').forEach(img => {
+    img.addEventListener('click', function() {
+      modalImg.src = img.src;
+      imageModal.style.display = 'flex';
+    });
+  });
+  imageModal.addEventListener('click', function() {
+    imageModal.style.display = 'none';
+    modalImg.src = '';
+  });
 });
