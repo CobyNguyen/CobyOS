@@ -1,4 +1,4 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
     <html lang="en">
         <head>
             <meta charset="UTF-8">
@@ -39,19 +39,24 @@
                         <span>About Me</span>
                     </div>
 
+                    <div class="desktop-icon" data-app="photos">
+                        <img src="images/appIcons/photos.png" alt="Photos">
+                        <span>Photos</span>
+                    </div>
+
                     <div class="desktop-icon" data-app="favoriteGames">
                         <img src="images/appIcons/steam.png" alt="Favorite Games">
-                        <span>Favorite Games</span>
+                        <span>Games</span>
                     </div>
 
                     <div class="desktop-icon" data-app="favoriteFilms">
                         <img src="images/appIcons/vlc.png" alt="Favorite Films">
-                        <span>Favorite Films/Shows</span>
+                        <span>VLC Media Player</span>
                     </div>
 
                     <div class="desktop-icon" data-app="favoriteBooks">
                         <img src="images/appIcons/calibre.svg" alt="Favorite Books">
-                        <span>Favorite Books</span>
+                        <span>eReader</span>
                     </div>
 
                     <div class="desktop-icon" data-app="homework">
@@ -60,8 +65,8 @@
                     </div>
 
                     <div class="desktop-icon" data-app="projects">
-                        <img src="images/appIcons/vscode.png" alt="Projects">
-                        <span>Projects</span>
+                        <img src="images/appIcons/vscode.png" alt="Visual Studio Code">
+                        <span>Visual Studio Code</span>
                     </div>
                 </div>
 
@@ -74,28 +79,50 @@
                             <p>Hello everyone, my name is Coby, and this is a website I made that is styled like an operating system.</p>
                             <ul>
                                 <li>Hobbies: Gaming, reading, anime, programming, drawing, learning new things</li>
-                                <li>I am majoring in computer engineering. I hope to work on VLSI system architecture</li>
+                                <li>I am majoring in computer engineering. I hope to become a VLSI engineer to optimize hardware for performance and efficiency.</li>
                                 <li>Fun Fact: I love playing fighting games</li>
                             </ul>
                         </div>
                     </div>
 
+                    <div class="window" id="photosWindow" style="display:none;">
+                        <div class="window-title">Photos <button class="window-close" title="Close">&times;</button></div>
+                        <div class="window-content"> 
+                            <h2>Photos</h2>
+                            <p>This is a collection of my favorite photos.</p>
+                            <ul>
+                                <img src="images\gallery\1.png" alt="Photo 1">
+                                <li><img src="images/references/photo2.jpg" alt="Photo 2"></li>
+                                <li><img src="images/references/photo3.jpg" alt="Photo 3"></li>
+                                <li><img src="images/references/photo4.jpg" alt="Photo 4"></li>
+                                <li><img src="images/references/photo5.jpg" alt="Photo 5"></li>
+                            </ul>
+                        </div>
+                    </div>
+
                     <div class="window" id="favoriteGamesWindow" style="display:none;">
-                        <div class="window-title">Favorite Games <button class="window-close" title="Close">&times;</button></div>
+                        <div class="window-title">Games <button class="window-close" title="Close">&times;</button></div>
                         <div class="window-content">
-                            <h2>Games</h2>
+                            <h2>Favorite Games</h2>
                             <p>I enjoy playing a variety of video games across different genres. My favorite type of games are fighting games.</p>
                             <ul>
                                 <li><span class="preview-link" data-preview="images/references/persona.gif">Persona 5 Royal</span></li>
                                 <li><span class="preview-link" data-preview="images/references/pikmin.png">Pikmin</span></li>
                                 <li><span class="preview-link" data-preview="images/references/smash.png">Super Smash Bros. Ultimate</span></li>
                                 <li><span class="preview-link" data-preview="images/references/limbus.gif">Limbus Company</span></li>
-                                <li><span class="preview-link" data-preview="images/references/guiltygear.png">Guilty Gear -Strive- </span></li>
-                                <li><span class="preview-link" data-preview="images/references/terraria.png">Terraria</span></li>
-                                <li><span class="preview-link" data-preview="images/references/slay.png">Slay the Princess</span></li>
+                                <li><span class="preview-link" data-preview="images/references/ggst.gif">Guilty Gear -Strive- </span></li>
+                                <li><span class="preview-link" data-preview="images/references/terraria.gif">Terraria</span></li>
                                 <li><span class="preview-link" data-preview="images/references/danganronpa.png">Danganronpa</span></li>
-                                <li><span class="preview-link" data-preview="images/references/riskofrain.png">Risk of Rain</span></li>
-                                <li><span class="preview-link" data-preview="images/references/fireemblem.png">Fire Emblem: Awakening</span></li>
+                                <li><span class="preview-link" data-preview="images/references/riskofrain.gif">Risk of Rain</span></li>
+                                <li><span class="preview-link" data-preview="images/references/FE.png">Fire Emblem: Awakening</span></li>
+                                <li><span class="preview-link" data-preview="images/references/hitman.png">Hitman</span></li>
+                            </ul>
+                            <h2>Other Games</h2>
+                            <ul>
+                                <li><span class="preview-link" data-preview="images/references/valorant.png">Valorant</span></li>
+                                <li><span class="preview-link" data-preview="images/references/mh.png">Monster Hunter</span></li>
+                                <li><span class="preview-link" data-preview="images/references/yugioh.png">Yu-gi-oh!</span></li>
+                                <li><span class="preview-link" data-preview="images/references/peggle.gif">Peggle</span></li>
                             </ul>
                         </div>
                     </div>
@@ -105,7 +132,7 @@
                     </div>
 
                     <div class="window" id="favoriteBooksWindow" style="display:none;">
-                        <div class="window-title">Favorite Books <button class="window-close" title="Close">&times;</button></div>
+                        <div class="window-title">Calibre eReader <button class="window-close" title="Close">&times;</button></div>
                         <div class="window-content">
                             <h2>Books</h2>
                             <p>I like to read classical literature and Japanese light novels (English translated).</p>
@@ -113,17 +140,17 @@
                                 <li>No Longer Human by Osamu Dazai</li>
                                 <li>The Metamorphosis by Franz Kafka</li>
                                 <li>Wuthering Heights by Emily Bronte</li>
-                                <li>The Evolution of Calpurnia Tate</li>
-                                <li>The Melancholy of Haruhi Suzumiya </li>
+                                <li>The Evolution of Calpurnia Tate by Jacqueline Kelly</li>
+                                <li>The Melancholy of Haruhi Suzumiya by Nagaru Tanigawa</li>
                                 <li>Sherlock Holmes by Sir Conan Arthur Doyle</li>
                             </ul>
                         </div>
                     </div>
 
                     <div class="window" id="favoriteFilmsWindow" style="display:none;">
-                        <div class="window-title">Favorite Films/Shows <button class="window-close" title="Close">&times;</button></div>
+                        <div class="window-title">VLC Media Player <button class="window-close" title="Close">&times;</button></div>
                         <div class="window-content">
-                            <h2>Films/Shows</h2>
+                            <h2>Favorite Films and TV</h2>
 
                             <h3>Anime</h3>
                             <ul>
@@ -140,22 +167,23 @@
 
                             <h3>Shows</h3>
                             <ul>
-                                <li><span class="preview-link" data-preview="breakingBad">Breaking Bad</span></li>
-                                <li><span class="preview-link" data-preview="betterCallSaul">Better Call Saul</span></li>
-                                <li><span class="preview-link" data-preview="ninjago">Ninjago</span></li>
+                                <li><span class="preview-link" data-preview="images/reference/breakingBad.png">Breaking Bad</span></li>
+                                <li><span class="preview-link" data-preview="images/reference/bcs.png">Better Call Saul</span></li>
+                                <li><span class="preview-link" data-preview="images/reference/witcher.png">The Witcher</span></li>
+                                <li><span class="preview-link" data-preview="images/reference/ninjago.png">Ninjago</span></li>
                             </ul>
 
                             <h3>Movies</h3>
                             <ul>
-                                <li><span class="preview-link" data-preview="backToTheFuture">Back to the Future</span></li>
-                                <li><span class="preview-link" data-preview="theTrumanShow">The Truman Show</span></li>
-                                <li><span class="preview-link" data-preview="oldboy">Oldboy</span></li>
-                                <li><span class="preview-link" data-preview="ipMan">Ip Man</span></li>
-                                <li><span class="preview-link" data-preview="whiplash">Whiplash</span></li>
-                                <li><span class="preview-link" data-preview="superman2025">Superman (2025)</span></li>
-                                <li><span class="preview-link" data-preview="theBatman2022">The Batman (2022)</span></li>
-                                <li><span class="preview-link" data-preview="theLEGOmovie">The LEGO Movie</span></li>
-                                <li><span class="preview-link" data-preview="everythingEverywhere">Everything, Everywhere, All At Once</span></li>
+                                <li><span class="preview-link" data-preview="images/reference/backToTheFuture.png   ">Back to the Future</span></li>
+                                <li><span class="preview-link" data-preview="images/reference/trumanShow.png">The Truman Show</span></li>
+                                <li><span class="preview-link" data-preview="images/reference/oldboy.png">Oldboy</span></li>
+                                <li><span class="preview-link" data-preview="images/reference/ipMan.png">Ip Man</span></li>
+                                <li><span class="preview-link" data-preview="images/reference/whiplash.png">Whiplash</span></li>
+                                <li><span class="preview-link" data-preview="images/reference/superman.png">Superman (2025)</span></li>
+                                <li><span class="preview-link" data-preview="images/reference/batman.png">The Batman (2022)</span></li>
+                                <li><span class="preview-link" data-preview="images/reference/theLEGOmovie.png">The LEGO Movie</span></li>
+                                <li><span class="preview-link" data-preview="images/reference/everything.png">Everything, Everywhere, All At Once</span></li>
                             </ul>
 
 
@@ -168,29 +196,58 @@
                         <div class="window-content">
                             <h2>Competitions</h2>
                             <ul>
-                                <h3>SkillsUSA</h3>
-                                <li>Engineering Technology Design </li>
+                                <h3><a href="https://www.skillsusa.org/" class="preview-link" data-preview="images/references/skillsusa.png" target="_blank">SkillsUSA</a></h3>
+                                <li>Engineering Technology Design</li>
                                 <li>Programming</li>
                                 <li>Emblem Ceremony</li>
-                        
-                                <h3>Business Professionals of America</h3>
+                                <h3><a href="https://www.bpa.org/" class="preview-link" data-preview="images/references/bpa.png" target="_blank">Business Professionals of America</a></h3>
                                 <li>Network Design Team</li>
+                                <li>Python Programming</li>
+                                <h3>Other</h3>
+                                <li>BEST Robotics</li>
+                                <li>Lockheed Martin CodeQuest</li>
+                                <li>AFA Cyberpatriot</li>
                             </ul>
-                    </div>
-                </div>
+                            <h2>Clubs</h2>
+                            <ul>
+                                
+                                <li>National Honor Society</li>
+                                <li>eSports Club
+                                    <ul>
+                                        <li>Super Smash Bros. Ultimate</li>
+                                        <li>Marvel Rivals</li>
+                                    </ul>
+                                </li>
 
+
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="window" id="projectsWindow" style="display:none;">
+                        <div class="window-title">Visual Studio Code <button class="window-close" title="Close">&times;</button></div>
+                        <div class="window-content">
+                            <h2>Projects</h2>
+                            <ul>
+                                <li><a href="doc/electrojan.pdf" target="_blank" class="preview-link" data-preview="images/references/electrojan.png">Electrojan</a></li>
+                                <li><a href="doc/kaiser.pdf" target="_blank" class="preview-link" data-preview="images/references/kaiserPoliceRobot.png">Kaiser Police Robot</a></li>
+                                <li><a href="https://github.com/CobyNguyen/Arduino-UNO-Weather-Monitor" target="_blank"  class="preview-link" data-preview="images/references/arduinoWeatherMonitor.png">Arduino Weather Monitor</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                </div>
+             
                 <!-- REFERENCE WINDOWS - WINDOW IN WINDOWS -------- -->
 
-                </div>
-
-                <div id="referenceWindows">
-                    <div class="window" id="persona" style="display:none;">
-                        <div class="window-title">Persona 5 Royal <button class="window-close" title="Close">&times;</button></div>
+                <!-- <div id="referenceWindows">
+                    <div class="window" id="skillsUSA" style="display:none;">
+                        <div class="window-title">SkillsUSA <button class="window-close" title="Close">&times;</button></div>
                         <div class="window-content">
-                            <img src="images/references/games/persona.gif" alt="Persona 5 Royal" style="width:100%;">
-                            <!-- Or embed a video: -->
-                            <!-- <iframe width="100%" height="250" src="https://www.youtube.com/embed/2uq34TeWEdQ" frameborder="0" allowfullscreen></iframe> -->
-                </div>
+                            <img src="images/skillsusa.png" alt="SkillsUSA">
+                        </div>
+                    </div> -->
 
             <script src="script.js"></script>
         </body>

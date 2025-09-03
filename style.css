@@ -1,8 +1,13 @@
+
+
 body {
     margin: 0;
     background: #222;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+    height: 100vh;
 }
+
 
 #taskbar {
     background: linear-gradient(90deg, #222 0%, #3a3d40 100%);
@@ -71,7 +76,8 @@ body {
 #desktop {
     position: relative;
     padding: 60px 20px 60px 20px;
-    min-height: 100vh;
+    height: 100vh;
+    min-height: 0;
     background: url('images/wallpaper.png') center center/cover no-repeat, linear-gradient(135deg, #3a3d40 0%, #232526 100%);
 }
 
@@ -86,6 +92,10 @@ body {
 .desktop-icon img {
     width: 48px;
     height: 48px;
+}
+
+.desktop-icon:hover {
+    background: #706f6f6e;
 }
 
 .desktop-icon span {
@@ -122,7 +132,7 @@ body {
 .window-close {
     background: transparent;
     border: none;
-    color: #fff;
+    color: #a89d9d;
     font-size: 20px;
     cursor: pointer;
     margin-left: 10px;
@@ -150,7 +160,7 @@ body {
   cursor: pointer;
 }
 .preview-link:hover {
-  color: #0078d7;
+  color: #4fc3f7;
 }
 
 #previewBox {
@@ -162,4 +172,22 @@ body {
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.2);
   padding: 8px;
+}
+
+/* Make all links look/act like preview-link */
+a,
+a:visited {
+  color: #000000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover {
+  color: #4fc3f7; /* same as preview-link hover */
+}
+    
+/* remove focus outline when clicking or tabbing */
+a:focus,
+a:active {
+  outline: none;
 }
