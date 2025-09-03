@@ -7,13 +7,42 @@
     </head>
     <body>
         <div id="taskbar">
-            <span>CobyOS</span>
-            <span id="clock"></span>
+            <div class="taskbar-left">
+                <button class="menu-btn" title="Menu">
+                    <img src="images/menu.png" alt="Menu" style="vertical-align:middle;">
+                </button>
+                <span class="taskbar-title">CobyOS</span>
+                <span class="taskbar-icon" title="Files">
+                    <img src="images/folder-invoices.png" alt="Files">
+                </span>
+                <span class="taskbar-icon" title="Browser">
+                    <img src="images/internet.png" alt="Browser">
+                </span>
+            </div>
+            <div class="taskbar-right">
+                <span id="clock"></span>
+            </div>
         </div>
         <div id="desktop">
+
+            <div class="desktop-icon" data-app="trashBin">
+                <img src="images/trash.svg" alt="Trash Bin">
+                <span>Trash Bin</span>
+            </div>
+            
             <div class="desktop-icon" data-app="aboutMe">
-                <img src="https://img.icons8.com/color/48/000000/user.png" alt="About Me">
+                <img src="images/user.png" alt="About Me">
                 <span>About Me</span>
+            </div>
+
+            <div class="desktop-icon" data-app="favoriteGames">
+                <img src="images/steam.png" alt="Favorite Games">
+                <span>Favorite Games</span>
+            </div>
+
+            <div class="desktop-icon" data-app="favoriteFilms">
+                <img src="images/vlc.png" alt="Favorite Films">
+                <span>Favorite Films/Shows</span>
             </div>
 
             <div class="desktop-icon" data-app="favoriteBooks">
@@ -21,32 +50,126 @@
                 <span>Favorite Books</span>
             </div>
 
-            <div class="window" id="aboutMeWindow">
+            <div class="desktop-icon" data-app="homework">
+                <img src="images/folder.png" alt="Homework">
+                <span>Homework</span>
+            </div>
+
+            <div class="desktop-icon" data-app="projects">
+                <img src="images/vscode.png" alt="Projects">
+                <span>Projects</span>
+            </div>
+
+            <div class="window" id="aboutMeWindow" style="display:none;">
                 <div class="window-title">About Me <button class="window-close" title="Close">&times;</button></div>
-                <div class="window-content">
+                <div class="window-content"> 
                     <h2>Coby</h2>
-                    <p>Hello! I'm Coby, and this is my personal website styled like an operating system.</p>
+                    <p>Hello everyone, my name is Coby, and this is a website I made that is styled      like an operating system.</p>
                     <ul>
                         <li>Hobbies: Gaming, Reading, Anime, Programming, making stuff</li>
-                        <li>Favorite Games: Pikmin, Persona 5, Super Smash Bros. Ultimate, Risk of Rain</li>
+                        <li></li>
                         <li>Fun Fact: I love playing fighting games</li>
                     </ul>
                 </div>
             </div>
 
-            <div class="window" id="favoriteBooksWindow">
+            <div class="window" id="favoriteGamesWindow" style="display:none;">
+                <div class="window-title">Favorite Games <button class="window-close" title="Close">&times;</button></div>
+                <div class="window-content">
+                    <h2>Games</h2>
+                    <p>I enjoy playing a variety of video games across different genres. My favorite genre</p>
+                    <ul>
+                        <li>Persona 5 Royal</li>
+                        <li>Pikmin</li>
+                        <li>Super Smash Bros. Ultimate</li>
+                        <li>Limbus Company</li>
+                        <li>Guilty Gear -Strive- </li>
+                        <li>Terraria</li>
+                        <li>Slay the Princess</li>
+                        <li>Danganronpa</li>
+                        <li></li>
+                        <li>Risk of Rain</li>
+                        <li>Fire Emblem: Awakening</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="window" id="favoriteBooksWindow" style="display:none;">
                 <div class="window-title">Favorite Books <button class="window-close" title="Close">&times;</button></div>
                 <div class="window-content">
                     <h2>Books</h2>
                     <p>I like to read classical literature and Japanese light novels (English translated).</p>
                     <ul>
-                        <li>Hobbies: Gaming, Reading, Anime, Programming, making stuff</li>
-                        <li>Favorite Language: Python</li>
-                        <li>Favorite Games: Pikmin, Persona 5, Super Smash Bros. Ultimate, Risk of Rain</li>
-                        <li>Fun Fact: I love playing fighting games</li>
+                        <li>No Longer Human by Osamu Dazai</li>
+                        <li>The Metamorphosis by Franz Kafka</li>
+                        <li>Wuthering Heights by Emily Bronte</li>
+                        <li>The Evolution of Calpurnia Tate</li>
+                        <li>The </li>
+                        <li></li>
                     </ul>
                 </div>
             </div>
+
+            <div class="window" id="favoriteFilmsWindow" style="display:none;">
+                <div class="window-title">Favorite Films/Shows <button class="window-close" title="Close">&times;</button></div>
+                <div class="window-content">
+                    <h2>Films/Shows</h2>
+
+                    <h3>Anime</h3>
+                    <ul>
+                        <li>Nisekoi: False Love</li>
+                        <li>Code Geass</li>
+                        <li>A Silent Voice</li>
+                        <li>The Melancholy of Haruhi Suzumiya</li>
+                        <li>March comes in like a lion</li>
+                        <li>Mob Psycho 100</li>
+                        <li>Attack on Titan</li>
+                        <li>The Disastrous Life of Saiki K.</li>
+                        <li>Steins;Gate</li>
+                        <li>Films: Inception, The Matrix, Spirited Away</li>
+                    </ul>
+
+                    <h3>Shows</h3>
+                    <ul>
+                        <li>Breaking Bad</li>
+                        <li>Better Call Saul</li>
+                        <li>Ninjago</li>
+                    </ul>
+
+                    <h3>Movies</h3>
+                    <ul>
+                        <li>Back to the Future</li>
+                        <li>The Truman Show</li>
+                        <li>Oldboy</li>
+                        <li>Ip Man</li>
+                        <li>Whiplash</li>
+                        <li>Superman (2025)</li>
+                        <li>The Batman (2022)</li>
+                        <li>The LEGO Movie</li>
+                        <li>Everything, Everywhere, All At Once</li>
+                    </ul>
+
+
+
+                </div>
+            </div>
+
+            <div class="window" id="homeworkWindow" style="display:none;">
+                <div class="window-title">Homework <button class="window-close" title="Close">&times;</button></div>
+                <div class="window-content">
+                    <h2>Competitions</h2>
+                    <ul>
+                        <h3>SkillsUSA</h3>
+                           <li>Engineering Technology Design </li>
+                           <li>Programming</li>
+                           <li>Emblem Ceremony</li>
+                
+                        <h3>Business Professionals of America</h3>
+                           <li>Network Design Team</li>
+                    </ul>
+            </div>
+
+
 
         </div>
         <script src="script.js"></script>

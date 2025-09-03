@@ -6,6 +6,8 @@ function updateClock() {
 setInterval(updateClock, 1000);
 updateClock();
 
+let topZIndex = 1; // Initialize a variable to keep track of the top z-index
+
 // Make all windows draggable
 document.querySelectorAll('.window').forEach(windowEl => {
     const titleBar = windowEl.querySelector('.window-title');
@@ -19,6 +21,9 @@ document.querySelectorAll('.window').forEach(windowEl => {
         offsetY = e.clientY - windowEl.offsetTop;
         windowEl.style.position = 'absolute';
         windowEl.style.zIndex = 1000;
+
+        topZIndex++; // Increase the z-index when dragging
+        windowEl.style.zIndex = topZIndex;
     });
 
     document.addEventListener('mousemove', (e) => {
@@ -46,6 +51,10 @@ document.querySelectorAll('.desktop-icon').forEach(icon => {
     icon.addEventListener('click', () => {
         const app = icon.getAttribute('data-app');
         const win = document.getElementById(app + 'Window');
-        if (win) win.style.display = 'block';
+        if (win) {
+            win.style.display = 'block';
+            topZIndex++;
+            win.style.zIndex = topZIndex;
+        }
     });
 });
