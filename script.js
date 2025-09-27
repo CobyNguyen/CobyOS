@@ -2,21 +2,26 @@ document.addEventListener('DOMContentLoaded', function() {
   // Preview on hover for any preview-link
   const previewBox = document.getElementById('previewBox');
   const previewImg = document.getElementById('previewImg');
-  document.querySelectorAll('.preview-link').forEach(function(link) {
-    link.addEventListener('mouseover', function(e) {
-      previewImg.src = link.getAttribute('data-preview');
+  // Use event delegation for preview-link hover (works for dynamically loaded content)
+  document.body.addEventListener('mouseover', function(e) {
+    if (e.target.classList.contains('preview-link')) {
+      previewImg.src = e.target.getAttribute('data-preview');
       previewBox.style.display = 'block';
       previewBox.style.left = e.pageX + 20 + 'px';
       previewBox.style.top = e.pageY + 20 + 'px';
-    });
-    link.addEventListener('mousemove', function(e) {
+    }
+  });
+  document.body.addEventListener('mousemove', function(e) {
+    if (e.target.classList.contains('preview-link')) {
       previewBox.style.left = e.pageX + 20 + 'px';
       previewBox.style.top = e.pageY + 20 + 'px';
-    });
-    link.addEventListener('mouseout', function() {
+    }
+  });
+  document.body.addEventListener('mouseout', function(e) {
+    if (e.target.classList.contains('preview-link')) {
       previewBox.style.display = 'none';
       previewImg.src = '';
-    });
+    }
   });
 
   function updateClock() {
@@ -76,6 +81,26 @@ document.addEventListener('DOMContentLoaded', function() {
         win.style.display = 'block';
         topZIndex++;
         win.style.zIndex = topZIndex;
+        // Modular content loading
+        const contentDiv = win.querySelector('.window-content');
+        if (contentDiv && contentDiv.dataset.load && contentDiv.innerHTML.trim() === '') {
+          fetch(contentDiv.dataset.load)
+            .then(res => res.text())
+            .then(html => {
+              contentDiv.innerHTML = html;
+              // Re-attach gallery modal logic for dynamically loaded images
+              if (contentDiv.querySelector('.gallery-grid')) {
+                contentDiv.querySelectorAll('.gallery-grid img').forEach(img => {
+                  img.addEventListener('click', function() {
+                    const modalImg = document.getElementById('modalImg');
+                    const imageModal = document.getElementById('imageModal');
+                    modalImg.src = img.src;
+                    imageModal.style.display = 'flex';
+                  });
+                });
+              }
+            });
+        }
       }
     });
   });
